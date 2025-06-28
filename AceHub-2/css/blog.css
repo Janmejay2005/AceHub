@@ -1,0 +1,323 @@
+:root {
+  --primary: #fff;
+  --accent: #4f9cf9;
+  --bg-dark: #000;
+  --card-bg: #181924;
+  --card-border: #4f9cf9;
+  --desc: #cccccc;
+  --meta: #bbb;
+  --footer-bg: #111;
+  --footer-link: #bbb;
+  --footer-link-hover: #fff;
+  --heart: #e25555;
+}
+
+body {
+  background: var(--bg-dark);
+  color: var(--primary);
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Navbar */
+
+.navbar {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  padding-bottom: 40px;
+}
+.logo{
+    font-size: 20px;
+    transition: 0.5s linear;
+}
+.logo:hover{
+    scale: 1.2;
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 6px 10px;
+  transition: 0.3s linear;
+  border: 2px solid transparent;
+}
+.nav-links li a:hover {
+  color: black;
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 50px;
+}
+.login-icon a {
+  font-size: 30px;
+  color: rgb(227, 159, 244);
+  text-decoration: none;
+}
+.login-icon a:hover {
+  color: white;
+}
+
+/* .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 4vw 1.5rem 4vw;
+  background: var(--bg-dark);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.logo {
+  font-weight: bold;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+.navbar ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
+}
+.navbar ul li a {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color .2s;
+}
+.navbar ul li a:hover { color: var(--accent); }
+.profile-icon {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background: #23223b;
+  border-radius: 50%;
+  margin-left: 1.5rem;
+} */
+
+/* Main Title and Description */
+.main-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 2.5rem 0 1.5rem 0;
+  letter-spacing: 2px;
+  color: var(--primary);
+}
+.desc {
+  max-width: 800px;
+  margin: 0 auto 2.5rem auto;
+  color: var(--desc);
+  font-size: 1.07rem;
+  text-align: center;
+  line-height: 1.7;
+}
+
+/* Posts Grid */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1300px;
+  margin: 0 auto 3rem auto;
+  padding: 0 1.5rem;
+  justify-items: center;
+}
+
+/* Blog Card */
+.blog-card {
+  background: var(--card-bg);
+  border: 2px solid var(--card-border);
+  border-radius: 14px;
+  box-shadow: 0 4px 24px #0002;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+  min-height: 340px;
+  max-width: 350px;
+  width: 100%;
+  position: relative;
+  transition: transform 0.15s;
+}
+.blog-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: var(--accent);
+}
+.blog-card .blog-header {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.8rem;
+}
+.blog-card .avatar {
+  width: 36px;
+  height: 36px;
+  background: var(--accent);
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+.blog-card .blog-meta {
+  font-size: 0.92rem;
+  color: var(--meta);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.blog-card .blog-title {
+  font-size: 1.08rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0.7rem;
+  color: var(--primary);
+  line-height: 1.3;
+}
+.blog-card .blog-body {
+  color: #e0e0e0;
+  font-size: 1rem;
+  line-height: 1.6;
+  flex: 1 1 auto;
+  margin-bottom: 1.2rem;
+}
+.blog-card .blog-footer {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 1.03rem;
+  color: var(--meta);
+}
+.blog-card .blog-footer .likes {
+  color: var(--heart);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.blog-card .blog-footer .views {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Footer */
+footer {
+  background: var(--footer-bg);
+  color: #fff;
+  padding: 2.5rem 1rem 1rem 1rem;
+  border-top: 1px solid #23223b;
+}
+.footer-main {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 1.5rem;
+}
+.footer-brand {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+}
+.footer-links {
+  display: flex;
+  gap: 3.5rem;
+  flex-wrap: wrap;
+}
+.footer-title {
+  font-size: 1rem;
+  margin-bottom: .7rem;
+  color: var(--accent);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-links li {
+  margin-bottom: .4rem;
+}
+.footer-links a {
+  color: var(--footer-link);
+  text-decoration: none;
+  font-size: .97rem;
+  transition: color .2s;
+}
+.footer-links a:hover { color: var(--footer-link-hover); }
+.footer-bottom {
+  text-align: center;
+  color: #bbb;
+  font-size: .85rem;
+  margin-top: 1.2rem;
+  letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .posts-grid { grid-template-columns: 1fr 1fr; }
+  .footer-main { flex-direction: column; gap: 1.5rem; }
+  .footer-links { flex-direction: column; gap: 1.5rem; }
+}
+@media (max-width: 700px) {
+  .navbar { flex-direction: column; gap: .8rem; padding: 1rem .5rem; }
+  .main-title { font-size: 2rem; }
+  .posts-grid { grid-template-columns: 1fr; }
+  .blog-card { max-width: 95vw; }
+}
+
+/* Add this to your existing blog.css file */
+
+/* Horizontal Scroll Container */
+.blog-scroll-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 20px 0;
+  /* Hide scrollbar but keep functionality */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.blog-scroll-wrapper::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+/* Modify your existing blog grid */
+.blog-grid {
+  display: flex;
+  gap: 30px;
+  /* Remove any flex-wrap if you have it */
+  scroll-behavior: smooth;
+}
+
+/* Make blog cards fixed width */
+.blog-card {
+  flex: 0 0 350px; /* Fixed width, no shrinking */
+  /* Keep your existing blog-card styles */
+}
