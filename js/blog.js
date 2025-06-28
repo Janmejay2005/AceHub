@@ -2,7 +2,7 @@
 const posts = [
   {
     author: "PRATAP KUMAR SINGH",
-    avatar: "P",
+    avatar: "PKS",
     date: "3 days ago",
     read: "3 min read",
     title: "Building Your First Startup: Lessons from IIT Patna",
@@ -12,41 +12,46 @@ const posts = [
   },
   {
     author: "Amit Verma",
-    avatar: "A",
+    avatar: "AV",
     date: "2 days ago",
     read: "4 min read",
     title: "Innovation at Campus: The Ideation Workshop Experience",
-    body: "Amit shares his experience attending a hands-on ideation workshop, highlighting key takeaways and the importance of creative thinking in entrepreneurship.",
+    body: "The Ideation Workshop at our campus was a vibrant and transformative event, designed to ignite creativity and foster a culture of innovation among students and faculty. By bringing together diverse minds in a collaborative environment, the workshop offered participants a unique opportunity to explore the process of ideation—generating, developing, and communicating new ideas for real-world challenges.",
     likes: 10,
     views: 30
   },
   {
     author: "Sneha Gupta",
-    avatar: "S",
+    avatar: "SG",
     date: "1 day ago",
     read: "2 min read",
     title: "From Idea to MVP: A Student’s Journey",
-    body: "Sneha describes her journey from brainstorming a business idea to developing a minimum viable product, emphasizing the learning process.",
+    body: "The journey from a simple idea to a Minimum Viable Product (MVP) is both challenging and rewarding, especially for students stepping into the world of innovation and entrepreneurship. This collage captures the essence of that journey, highlighting the key milestones, struggles, and triumphs experienced by students as they transform their concepts into tangible solutions.
+",
     likes: 18,
     views: 25
   },
   {
     author: "Jay Kumar",
-    avatar: "J",
+    avatar: "JK",
     date: "5 hours ago",
     read: "5 min read",
     title: "Overcoming Startup Challenges in College",
-    body: "Jay discusses the common obstacles faced by student entrepreneurs and shares tips on balancing academics with startup ambitions.",
+    body: "Starting a business while studying was tougher than I imagined, but it taught me so much about time management and persistence,Balancing classes and startup tasks was a daily challenge, but I learned to prioritize and stay organized.
+",
     likes: 8,
     views: 22
   },
   {
-    author: "Priya Singh",
-    avatar: "P",
+    author: "Janmejay Singh",
+    avatar: "JS",
     date: "just now",
     read: "3 min read",
     title: "Startup Networking: Building Connections at IIT Patna",
-    body: "Priya highlights the value of networking events and how connecting with mentors and peers has accelerated her startup journey.",
+    body: "Being a part of the startup networking scene at IIT Patna has been an eye-opening experience for us. From attending E-Summit events to joining interactive sessions at the Incubation Centre, we’ve had countless opportunities to connect with founders, investors, and industry leaders. These events aren’t just about exchanging business cards—they’re about building real relationships and learning from each other’s journeys.
+
+
+",
     likes: 20,
     views: 50
   }
