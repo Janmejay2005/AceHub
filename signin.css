@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  color: #fff;
+  font-family: 'Montserrat', Arial, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-box {
+  background: transparent;
+  padding: 40px 30px 30px 30px;
+  border-radius: 8px;
+  box-shadow: none;
+  min-width: 370px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-box h1 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.signup-box p {
+  margin: 0 0 30px 0;
+  font-size: 18px;
+  color: #bdbdbd;
+  font-weight: 400;
+}
+
+.signup-box p a {
+  color: #a084ff;
+  text-decoration: none;
+  font-weight: 400;
+  margin-left: 5px;
+}
+
+.signup-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 13px 0;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 3px;
+  font-size: 18px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-weight: 500;
+}
+
+
+.divider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 25px;
+  color: #bdbdbd;
+  font-size: 16px;
+}
+
+.divider span {
+  margin: 0 15px;
+}
+
+.divider::before, .divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #222;
+}
+
+.signup-btn.email {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #222;
+  margin-bottom: 0;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 30px;
+  font-size: 15px;
+  color: #bdbdbd;
+  width: 100%;
+}
+
+.checkbox-row input[type="checkbox"] {
+  accent-color: #1877f2;
+  margin-right: 7px;
+  width: 15px;
+  height: 15px;
+}
+
+.checkbox-row label {
+  color: #bdbdbd;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.checkbox-row a {
+  color: #a084ff;
+  text-decoration: underline;
+  margin-left: 3px;
+  font-size: 15px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 28px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+@media (max-width: 500px) {
+  .signup-box {
+    min-width: 90vw;
+    padding: 30px 10px 20px 10px;
+  }
+  .signup-box h1 {
+    font-size: 36px;
+  }
+  .checkbox-row {
+    width: 95vw;
+    font-size: 14px;
+  }
+}

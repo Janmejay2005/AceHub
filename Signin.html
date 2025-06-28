@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/signin.css">
+  <script src="https://accounts.google.com/gsi/client" async></script>
+</head>
+<body>
+  <button class="close-btn" aria-label="Close">&times;</button>
+  <div class="container">
+    <div class="signup-box">
+      <h1>Sign Up</h1>
+      <p>Already a member? <a href="#">Log In</a></p>
+      <!-- Google Sign-In button -->
+      <div id="g_id_onload"
+        data-client_id="YOUR_GOOGLE_CLIENT_ID"
+        data-login_uri="https://your.domain/your_login_endpoint"
+        data-auto_prompt="false">
+      </div>
+      <div class="g_id_signin"
+        data-type="standard"
+        data-size="large"
+        data-theme="outline"
+        data-text="sign_in_with"
+        data-shape="rectangular"
+        data-logo_alignment="left">
+      </div>
+      <!-- Divider -->
+      <div class="divider"><span>or</span></div>
+      <!-- Email button -->
+      <button class="signup-btn email">Sign up with email</button>
+      <!-- Checkbox row -->
+      <div class="checkbox-row">
+        <input type="checkbox" id="public-profile" checked>
+        <label for="public-profile">
+          Sign up to this site with a public profile. <a href="#">Read more</a>
+        </label>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
