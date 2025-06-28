@@ -42,7 +42,7 @@ const posts = [
   },
   {
     author: "Janmejay Singh",
-    avatar: "JS",
+    avatar: "J",
     date: "just now",
     read: "3 min read",
     title: "Startup Networking: Building Connections at IIT Patna",
