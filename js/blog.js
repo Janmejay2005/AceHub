@@ -1,8 +1,8 @@
 // Sample posts data with unique authors, titles, and bodies
 const posts = [
   {
-    author: "Riya Sharma",
-    avatar: "R",
+    author: "PRATAP KUMAR SINGH",
+    avatar: "P",
     date: "3 days ago",
     read: "3 min read",
     title: "Building Your First Startup: Lessons from IIT Patna",
