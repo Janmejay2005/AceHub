@@ -1,14 +1,56 @@
-// Sample posts data
-const posts = Array.from({length: 12}, (_, i) => ({
-  author: "ACEHUB",
-  avatar: "A",
-  date: "3 days ago",
-  read: "3 min read",
-  title: `"HOW TO IDEATE A STARTUP" - JAY IIT STUDENT ASSISTED IN THE AUDITORIUM OF IIT PATNA SENATE HALL`,
-  body: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.`,
-  likes: 12,
-  views: 12
-}));
+// Sample posts data with unique authors, titles, and bodies
+const posts = [
+  {
+    author: "Riya Sharma",
+    avatar: "R",
+    date: "3 days ago",
+    read: "3 min read",
+    title: "Building Your First Startup: Lessons from IIT Patna",
+    body: "Discover how students at IIT Patna are turning ideas into startups, facing challenges, and building innovative solutions for real-world problems.",
+    likes: 15,
+    views: 40
+  },
+  {
+    author: "Amit Verma",
+    avatar: "A",
+    date: "2 days ago",
+    read: "4 min read",
+    title: "Innovation at Campus: The Ideation Workshop Experience",
+    body: "Amit shares his experience attending a hands-on ideation workshop, highlighting key takeaways and the importance of creative thinking in entrepreneurship.",
+    likes: 10,
+    views: 30
+  },
+  {
+    author: "Sneha Gupta",
+    avatar: "S",
+    date: "1 day ago",
+    read: "2 min read",
+    title: "From Idea to MVP: A Student’s Journey",
+    body: "Sneha describes her journey from brainstorming a business idea to developing a minimum viable product, emphasizing the learning process.",
+    likes: 18,
+    views: 25
+  },
+  {
+    author: "Jay Kumar",
+    avatar: "J",
+    date: "5 hours ago",
+    read: "5 min read",
+    title: "Overcoming Startup Challenges in College",
+    body: "Jay discusses the common obstacles faced by student entrepreneurs and shares tips on balancing academics with startup ambitions.",
+    likes: 8,
+    views: 22
+  },
+  {
+    author: "Priya Singh",
+    avatar: "P",
+    date: "just now",
+    read: "3 min read",
+    title: "Startup Networking: Building Connections at IIT Patna",
+    body: "Priya highlights the value of networking events and how connecting with mentors and peers has accelerated her startup journey.",
+    likes: 20,
+    views: 50
+  }
+];
 
 function renderPosts() {
   document.getElementById('postsGrid').innerHTML = posts.map(post => `
