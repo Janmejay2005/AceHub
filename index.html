@@ -175,6 +175,11 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p
       COPYRIGHT©2025 ACEHUB. ALL RIGHTS RESERVED
     </div>
   </footer>
-    <!-- footer ends -->
+    
+    window.onload = function() {
+  if (window.location.hash === "#footer") {
+    document.getElementById("footer").scrollIntoView({ behavior: "smooth" });
+  }
+};
 </body>
 </html>
