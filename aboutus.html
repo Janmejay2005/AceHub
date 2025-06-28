@@ -150,9 +150,14 @@
   </div>
   <script>
     function goHome() {
-    
-      window.location.href = "index.html#footer";
-    }
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('fromFooter')) {
+    window.location.href = "index.html#footer";
+  } else {
+    window.location.href = "index.html";
+  }
+}
+
   </script>
 </body>
 </html>
