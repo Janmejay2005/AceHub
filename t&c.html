@@ -2,198 +2,208 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ACEHUB - Terms & Conditions</title>
+  <title>Terms & Conditions</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', Arial, sans-serif;
-      background: linear-gradient(135deg, #232526 0%, #485563 100%);
-      color: #f4f4f4;
+      background: #181818;
+      color: #f3f3f3;
+    }
+    /* Modal overlay */
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.85);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       min-height: 100vh;
+    }
+    /* Modal box */
+    .modal-box {
+      background: #232323;
+      border-radius: 14px;
+      max-width: 600px;
+      width: 90%;
+      max-height: 85vh;
+      padding: 2.5rem 2rem 2rem 2rem;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      position: relative;
+      animation: fadeIn 0.3s;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      padding: 20px 0;
-    }
-    .container {
-      background: rgba(36, 40, 47, 0.97);
-      border-radius: 18px;
-      box-shadow: 0 6px 32px rgba(0,0,0,0.18);
-      max-width: 900px;
-      width: 96%;
-      margin: 30px 0;
-      padding: 44px 36px 36px 36px;
-      position: relative;
-      animation: fadeIn 1.1s;
     }
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-30px);}
-      to { opacity: 1; transform: translateY(0);}
+      from { transform: scale(0.97); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
     }
+    /* Close button */
     .close-btn {
       position: absolute;
       top: 18px;
-      right: 22px;
-      background: #ff4b5c;
+      right: 18px;
+      background: #333;
       color: #fff;
       border: none;
       border-radius: 50%;
       width: 36px;
       height: 36px;
-      font-size: 22px;
+      font-size: 1.6rem;
+      font-weight: bold;
       cursor: pointer;
       transition: background 0.2s;
       z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .close-btn:hover {
-      background: #d7263d;
+      background: #ff4d4d;
+      color: #fff;
     }
-    h1 {
-      font-size: 2.5rem;
-      font-weight: bold;
-      margin-bottom: 18px;
-      color: #ffd460;
-      text-align: center;
+    /* Scrollable content area */
+    .modal-content {
+      overflow-y: auto;
+      flex: 1 1 auto;
+      margin-bottom: 1.2em;
+      padding-right: 0.5em;
+    }
+    /* Headings */
+    .modal-content h2 {
+      margin-top: 0;
+      font-size: 2rem;
       letter-spacing: 1px;
-      text-shadow: 0 2px 12px #222;
     }
-    h2 {
-      font-size: 1.5rem;
-      margin-top: 32px;
-      margin-bottom: 12px;
-      color: #ffd460;
-      font-weight: 600;
-      letter-spacing: 0.5px;
+    .modal-content h3 {
+      margin-bottom: 0.3em;
+      font-size: 1.2rem;
+      color: #ffe082;
     }
-    .section-title {
-      font-size: 1.18rem;
-      font-weight: 600;
-      margin-top: 28px;
-      margin-bottom: 8px;
-      color: #f9f871;
+    /* Content */
+    .modal-content ul {
+      padding-left: 1.2em;
+      margin-bottom: 1em;
     }
-    p, ul, ol {
-      font-size: 1.08rem;
-      line-height: 1.7;
-      margin-bottom: 12px;
-      text-align: justify;
+    .modal-content li {
+      margin-bottom: 0.5em;
     }
-    ul, ol {
-      margin-left: 22px;
+    .checkbox-container {
+      margin: 1.5em 0 0.5em 0;
+      display: flex;
+      align-items: center;
     }
-    .highlight-box {
-      background: #393e46;
-      border-left: 5px solid #ffd460;
-      padding: 16px 20px;
-      margin: 24px 0 0 0;
-      border-radius: 9px;
-      color: #f4f4f4;
-      font-size: 1.08rem;
+    .checkbox-container input[type="checkbox"] {
+      width: 1.3em;
+      height: 1.3em;
+      margin-right: 0.7em;
+      accent-color: #ffe082;
     }
+    .agree-label {
+      font-size: 1rem;
+      user-select: none;
+    }
+    /* Modal actions fixed at bottom */
+    .modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1em;
+      flex-shrink: 0;
+    }
+    .modal-actions button {
+      padding: 0.7em 1.5em;
+      background: #ffe082;
+      color: #232323;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.2s;
+    }
+    .modal-actions button:disabled {
+      background: #bdbdbd;
+      color: #888;
+      cursor: not-allowed;
+    }
+    /* Responsive */
     @media (max-width: 600px) {
-      .container {
-        padding: 22px 8px 18px 8px;
-      }
-      h1 {
-        font-size: 1.5rem;
-      }
-      h2 {
-        font-size: 1.1rem;
-      }
-      .section-title {
-        font-size: 1rem;
-      }
+      .modal-box { padding: 1.2rem 0.7rem 1.5rem 0.7rem; max-height: 95vh; }
+      .close-btn { top: 10px; right: 10px; width: 32px; height: 32px; font-size: 1.1rem; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <button class="close-btn" onclick="goHome()" title="Go to Previous Page">&times;</button>
-    <h1>ACEHUB Terms &amp; Conditions</h1>
-
-    <h2>Acknowledgment</h2>
-    <p>
-      By accessing and using ACEHUB, you confirm that you have read, understood, and agree to comply with these Terms &amp; Conditions. If you do not agree with any part of these terms, please discontinue use of our services immediately.
-    </p>
-
-    <h2>Links to Other Websites</h2>
-    <p>
-      ACEHUB may provide links to external websites for your convenience. We do not control or endorse the content, privacy practices, or accuracy of information on third-party sites. Your use of such links is at your own risk, and we recommend reviewing the terms and privacy policies of any external sites you visit.
-    </p>
-
-    <h2>Termination</h2>
-    <p>
-      We reserve the right to suspend or terminate your access to ACEHUB at any time, without prior notice, for conduct that we believe violates these Terms &amp; Conditions or is harmful to other users, us, or third parties. Upon termination, your right to use our services will immediately cease.
-    </p>
-
-    <h2>Limitation of Liability</h2>
-    <p>
-      ACEHUB and its affiliates will not be liable for any direct, indirect, incidental, special, or consequential damages arising from your use of, or inability to use, our services or content. This includes, but is not limited to, damages for loss of profits, data, or other intangible losses, even if we have been advised of the possibility of such damages.
-    </p>
-
-    <h2>Disclaimers</h2>
-    <p>
-      All information and materials provided by ACEHUB are for general educational purposes only. We make no warranties or representations regarding the accuracy, completeness, or reliability of any content. Use our services at your own risk.
-    </p>
-
-    <h2>Governing Law</h2>
-    <p>
-      These Terms &amp; Conditions are governed by the laws of the jurisdiction where ACEHUB operates, without regard to its conflict of law provisions.
-    </p>
-
-    <h2>Dispute Resolution</h2>
-    <p>
-      Any disputes arising out of or relating to these Terms &amp; Conditions will first be attempted to be resolved informally by contacting ACEHUB support. If resolution cannot be reached, disputes shall be subject to the exclusive jurisdiction of the courts in our operating jurisdiction.
-    </p>
-
-    <h2>EU User Provisions</h2>
-    <p>
-      If you are accessing ACEHUB from the European Union, you are entitled to certain rights under the General Data Protection Regulation (GDPR). Please refer to our Privacy Policy for details on how we protect and process your data.
-    </p>
-
-    <h2>US Legal Compliance</h2>
-    <p>
-      By using ACEHUB, you represent and warrant that your use does not violate any applicable US laws or regulations, including export control laws.
-    </p>
-
-    <h2>Severability and Waiver</h2>
-    <div class="section-title">Severability</div>
-    <p>
-      If any provision of these Terms is found to be unenforceable or invalid, that provision will be modified and interpreted to fulfill its intended purpose to the greatest extent permitted by law. The remaining provisions will continue in full force and effect.
-    </p>
-    <div class="section-title">Waiver</div>
-    <p>
-      Failure to exercise or enforce any right or provision of these Terms does not constitute a waiver of such right or provision. Any waiver must be in writing to be effective.
-    </p>
-
-    <h2>Translation Interpretation</h2>
-    <p>
-      These Terms &amp; Conditions may have been translated for your convenience. In the event of a dispute, the original English version shall prevail.
-    </p>
-
-    <h2>Changes to These Terms and Conditions</h2>
-    <p>
-      ACEHUB reserves the right to update, modify, or replace these Terms at any time, at our sole discretion. If we make material changes, we will provide reasonable notice, such as by posting an update on our website. Continued use of ACEHUB after changes become effective constitutes your acceptance of the revised Terms. If you do not agree to the new Terms, please discontinue use of our services.
-    </p>
-
-    <div class="highlight-box">
-      <strong>Contact Us:</strong> For questions or concerns regarding these Terms &amp; Conditions, please reach out to our support team via the contact section on the ACEHUB website.
+  <div class="modal-overlay" id="termsModal">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="termsTitle">
+      <button class="close-btn" id="closeModal" aria-label="Close Terms & Conditions">&times;</button>
+      <div class="modal-content">
+        <h2 id="termsTitle">Terms & Conditions</h2>
+        <p>Please read these terms and conditions carefully before using our Service.</p>
+        <h3>Interpretation and Definitions</h3>
+        <ul>
+          <li><strong>Affiliate:</strong> An entity controlling or controlled by us with at least 50% ownership.</li>
+          <li><strong>Country:</strong> Refers to: <em>Delhi, India</em>.</li>
+          <li><strong>Device:</strong> Any device that can access the Service (computer, phone, tablet).</li>
+          <li><strong>Service:</strong> Refers to our Website and its features.</li>
+          <li><strong>Website:</strong> Accessible from <em>yourwebsite.com</em>.</li>
+          <li><strong>You:</strong> The individual or entity accessing or using the Service.</li>
+        </ul>
+        <h3>Acknowledgment</h3>
+        <p>
+          By accessing or using our Service, you agree to be bound by these Terms & Conditions. If you disagree with any part, you may not access the Service.
+        </p>
+        <h3>Additional Terms</h3>
+        <ul>
+          <li><strong>Privacy:</strong> Your privacy is important. Please review our Privacy Policy for details on data collection and use.</li>
+          <li><strong>Changes:</strong> We reserve the right to modify these terms at any time. Continued use constitutes acceptance of updated terms.</li>
+          <li><strong>Third-party Services:</strong> Our Service may include links or integrations with third-party services. We are not responsible for their content or practices.</li>
+        </ul>
+        <h3>Limitation of Liability</h3>
+        <p>
+          To the maximum extent permitted by law, we are not liable for any indirect, incidental, or consequential damages arising from your use of the Service.
+        </p>
+        <h3>Termination</h3>
+        <p>
+          We may terminate or suspend your access to the Service immediately, without prior notice or liability, for any reason whatsoever.
+        </p>
+        <h3>Governing Law</h3>
+        <p>
+          These Terms shall be governed and construed in accordance with the laws of India, without regard to its conflict of law provisions.
+        </p>
+        <h3>Contact Us</h3>
+        <p>
+          If you have any questions about these Terms, please contact us at <a href="mailto:support@yourwebsite.com" style="color:#ffe082;">support@yourwebsite.com</a>.
+        </p>
+        <div class="checkbox-container">
+          <input type="checkbox" id="agreeTerms">
+          <label for="agreeTerms" class="agree-label">I agree to the Terms & Conditions.</label>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button id="acceptBtn" disabled>Accept</button>
+      </div>
     </div>
   </div>
   <script>
-    // Redirects to the previous page in browser history
-    function goHome() {
-      window.history.back();
-    }
-
-    // Optional: Allow ESC key to close the modal and go back
-    document.addEventListener('keydown', function(e) {
-      if (e.key === "Escape") {
-        goHome();
-      }
+    // Enable Accept button only if checkbox is checked
+    const agreeCheckbox = document.getElementById('agreeTerms');
+    const acceptBtn = document.getElementById('acceptBtn');
+    agreeCheckbox.addEventListener('change', function() {
+      acceptBtn.disabled = !this.checked;
     });
 
+    // Close modal and go back to previous page
+    document.getElementById('closeModal').onclick = function() {
+      history.back();
+    };
+    // Also allow Accept button to close and go back
+    acceptBtn.onclick = function() {
+      history.back();
+    };
     // Optional: Prevent scrolling of background when modal is open
     document.body.style.overflow = 'hidden';
   </script>
