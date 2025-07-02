@@ -127,10 +127,21 @@
       ACEHUB reserves the right to modify or update this disclaimer at any time without prior notice. Continued use of the site signifies your acceptance of the most current version.
     </p>
   </div>
-  <script>
+  
+<script>
+    // Redirects to the previous page in browser history
     function goHome() {
-      window.location.href = "index.html#footer";
+      window.history.back();
     }
+
+    // Optional: Allow ESC key to close the modal and go back
+    document.addEventListener('keydown', function(e) {
+      if (e.key === "Escape") {
+        goHome();
+      }
+    });
+
+    // SCROLLING IS ENABLED: Do NOT set body.style.overflow = 'hidden';
   </script>
 </body>
 </html>
