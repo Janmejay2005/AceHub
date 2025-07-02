@@ -257,19 +257,19 @@
   </div>
 
   <script>
+    // Redirects to the previous page in browser history
     function goHome() {
-      window.location.href = "index.html#footer";
+      window.history.back();
     }
 
-    document.addEventListener('DOMContentLoaded', function() {
-      document.documentElement.style.scrollBehavior = 'smooth';
-      
-      document.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', function(e) {
-          console.log('Link clicked:', this.href);
-        });
-      });
+    // Optional: Allow ESC key to close the modal and go back
+    document.addEventListener('keydown', function(e) {
+      if (e.key === "Escape") {
+        goHome();
+      }
     });
+
+    // SCROLLING IS ENABLED: Do NOT set body.style.overflow = 'hidden';
   </script>
 </body>
 </html>
