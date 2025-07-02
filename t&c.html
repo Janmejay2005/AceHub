@@ -109,7 +109,7 @@
 </head>
 <body>
   <div class="container">
-    <button class="close-btn" onclick="goHome()" title="Go to Homepage">&times;</button>
+    <button class="close-btn" onclick="goHome()" title="Go to Previous Page">&times;</button>
     <h1>ACEHUB Terms &amp; Conditions</h1>
 
     <h2>Acknowledgment</h2>
@@ -160,21 +160,21 @@
     <h2>Severability and Waiver</h2>
     <div class="section-title">Severability</div>
     <p>
-      If any provision of these Terms is found to be unenforceable or invalid, that provision will be modified and interpreted to fulfill its intended purpose to the greatest extent permitted by law. The remaining provisions will continue in full force and effect[5][6][1].
+      If any provision of these Terms is found to be unenforceable or invalid, that provision will be modified and interpreted to fulfill its intended purpose to the greatest extent permitted by law. The remaining provisions will continue in full force and effect.
     </p>
     <div class="section-title">Waiver</div>
     <p>
-      Failure to exercise or enforce any right or provision of these Terms does not constitute a waiver of such right or provision. Any waiver must be in writing to be effective[5][6][1].
+      Failure to exercise or enforce any right or provision of these Terms does not constitute a waiver of such right or provision. Any waiver must be in writing to be effective.
     </p>
 
     <h2>Translation Interpretation</h2>
     <p>
-      These Terms &amp; Conditions may have been translated for your convenience. In the event of a dispute, the original English version shall prevail[1].
+      These Terms &amp; Conditions may have been translated for your convenience. In the event of a dispute, the original English version shall prevail.
     </p>
 
     <h2>Changes to These Terms and Conditions</h2>
     <p>
-      ACEHUB reserves the right to update, modify, or replace these Terms at any time, at our sole discretion. If we make material changes, we will provide reasonable notice, such as by posting an update on our website. Continued use of ACEHUB after changes become effective constitutes your acceptance of the revised Terms. If you do not agree to the new Terms, please discontinue use of our services[2][1].
+      ACEHUB reserves the right to update, modify, or replace these Terms at any time, at our sole discretion. If we make material changes, we will provide reasonable notice, such as by posting an update on our website. Continued use of ACEHUB after changes become effective constitutes your acceptance of the revised Terms. If you do not agree to the new Terms, please discontinue use of our services.
     </p>
 
     <div class="highlight-box">
@@ -182,13 +182,18 @@
     </div>
   </div>
   <script>
-    document.getElementById('closeModal').onclick = function() {
-      history.back();
-    };
-    // Also allow Accept button to close and go back
-    acceptBtn.onclick = function() {
-      history.back();
-    };
+    // Redirects to the previous page in browser history
+    function goHome() {
+      window.history.back();
+    }
+
+    // Optional: Allow ESC key to close the modal and go back
+    document.addEventListener('keydown', function(e) {
+      if (e.key === "Escape") {
+        goHome();
+      }
+    });
+
     // Optional: Prevent scrolling of background when modal is open
     document.body.style.overflow = 'hidden';
   </script>
