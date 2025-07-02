@@ -182,9 +182,15 @@
     </div>
   </div>
   <script>
-    function goHome() {
-      window.location.href = "index.html#footer";
-    }
+    document.getElementById('closeModal').onclick = function() {
+      history.back();
+    };
+    // Also allow Accept button to close and go back
+    acceptBtn.onclick = function() {
+      history.back();
+    };
+    // Optional: Prevent scrolling of background when modal is open
+    document.body.style.overflow = 'hidden';
   </script>
 </body>
 </html>
