@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ACEHUB Disclaimer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: linear-gradient(120deg, #232526 0%, #485563 100%);
+      color: #f4f4f4;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .disclaimer-container {
+      background: rgba(36, 40, 47, 0.97);
+      border-radius: 18px;
+      box-shadow: 0 6px 32px rgba(0,0,0,0.18);
+      max-width: 800px;
+      width: 95%;
+      margin: 50px 0 0 0;
+      padding: 40px 36px 36px 36px;
+      position: relative;
+      animation: fadeIn 1.1s;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-30px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 18px;
+      right: 22px;
+      background: #ff4b5c;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      font-size: 22px;
+      cursor: pointer;
+      transition: background 0.2s;
+      z-index: 2;
+    }
+
+    .close-btn:hover {
+      background: #d7263d;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 18px;
+      color: #ffd460;
+      text-align: left;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 12px #222;
+    }
+
+    .section-title {
+      font-size: 1.18rem;
+      font-weight: 600;
+      margin-top: 28px;
+      margin-bottom: 8px;
+      color: #f9f871;
+    }
+
+    p, ul {
+      font-size: 1.08rem;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      margin-left: 22px;
+    }
+
+    @media (max-width: 600px) {
+      .disclaimer-container {
+        padding: 22px 8px 18px 8px;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+      .section-title {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="disclaimer-container">
+    <button class="close-btn" onclick="goHome()" title="Go to Homepage">&times;</button>
+    <h1>Disclaimer</h1>
+    <p>
+      By using this website, you agree to the following terms. If you do not accept any part of this disclaimer, please refrain from using ACEHUB.
+    </p>
+
+    <div class="section-title">Information Accuracy</div>
+    <p>
+      All information on ACEHUB is provided for general reference only. While we strive to keep content current and accurate, we make no guarantees regarding the completeness, reliability, or suitability of any information. Any reliance you place on our content is at your own risk.
+    </p>
+
+    <div class="section-title">Educational Purpose</div>
+    <p>
+      ACEHUB offers study materials and resources aimed at supporting student learning. These materials are not a substitute for professional advice or formal education. We recommend verifying any information and consulting with educators or experts as needed.
+    </p>
+
+    <div class="section-title">Copyright Notice</div>
+    <p>
+      All content on ACEHUB is the property of ACEHUB unless otherwise noted. Unauthorized copying, reproduction, or distribution of any part of this website is strictly prohibited without written consent. You may download or print content for personal, non-commercial use only.
+    </p>
+
+    <div class="section-title">External Links</div>
+    <p>
+      ACEHUB may include links to external websites for your convenience. We do not control or endorse the content, privacy practices, or policies of these third-party sites. Users should review the terms and privacy statements of any external site they visit.
+    </p>
+
+    <div class="section-title">Disclaimer Updates</div>
+    <p>
+      ACEHUB reserves the right to modify or update this disclaimer at any time without prior notice. Continued use of the site signifies your acceptance of the most current version.
+    </p>
+  </div>
+  <script>
+    function goHome() {
+      window.location.href = "index.html#footer";
+    }
+  </script>
+</body>
+</html>
