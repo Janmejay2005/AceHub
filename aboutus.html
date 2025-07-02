@@ -148,16 +148,20 @@
       When you choose ACEHUB, you're choosing a partner dedicated to your academic journey. We promise to keep innovating, listening to your feedback, and supporting your growth every step of the way—so you can reach your full potential.
     </div>
   </div>
-  <script>
+   <script>
+    // Redirects to the previous page in browser history
     function goHome() {
-  const params = new URLSearchParams(window.location.search);
-  if (params.get('fromFooter')) {
-    window.location.href = "index.html#footer";
-  } else {
-    window.location.href = "index.html";
-  }
-}
+      window.history.back();
+    }
 
+    // Optional: Allow ESC key to close the modal and go back
+    document.addEventListener('keydown', function(e) {
+      if (e.key === "Escape") {
+        goHome();
+      }
+    });
+
+    // SCROLLING IS ENABLED: Do NOT set body.style.overflow = 'hidden';
   </script>
 </body>
 </html>
